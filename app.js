@@ -16,7 +16,11 @@ const countries = require('./countries.json');
  * @param  {string} language example: "es"
  * @returns {string}
  */
-function getCountryTranslatedName(isoCode, language){
+ function getCountryTranslatedName(isoCode, language){
+    let codigoIso = countries.filter(element => element.codigoIso3 = isoCode);
+    let codigoIso2 = codigoIso.filter(element => element.translations = language);
+    let codigoIso3 = JSON.stringify(codigoIso2);
+    return codigoIso3;
     //Complete with your code
 }
 /**Get an array of all the countries with the specified subregion
