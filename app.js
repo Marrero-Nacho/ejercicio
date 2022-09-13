@@ -1,13 +1,15 @@
+/* eslint-disable no-undef */
 const countries = require('./countries.json');
 
 /** Get all the data of one single country given the ISO3 code.
  * @param  {string} isoCode
  * @returns {Object}
  */
-function getCountryByIso3(isoCode){
+ function getCountryByIso3(isoCode){
     //Complete with your code
+    let iso = countries.filter(element => element.iso3 = isoCode)
+    return iso;
 }
-
 /**
  * Get a country translated name given his ISO3 code and tranlated language.
  * @param  {string} isoCode
