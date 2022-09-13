@@ -27,7 +27,13 @@ const countries = require('./countries.json');
  * @param  {string} subregion
  * @returns {Array}
  */
-function getCountriesBySubregion(subregion){
+ function getCountriesBySubregion(subregion){
+    let codigoIso = countries.filter(element => element.subregion = subregion);
+    const isoArray = [];
+    for(var i in codigoIso) {
+        isoArray.push([i,codigoIso[i]]);
+    }
+    return isoArray;
     //Complete with your code
 }
 
